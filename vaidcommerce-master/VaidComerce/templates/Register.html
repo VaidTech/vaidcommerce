@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}{% endblock %}
+{% block stylesheet %}
+     <style>
+       form {
+         width:350px;
+       }
+     </style>
+{% endblock %}
+{% block content %}
+<div class="row">
+ <div class="container">
+    <h2>Register Form</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+
+        {{ field|add_class:'form-control' }}
+
+          
+        {% for error in field.errors %}
+          <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">
+        <span class="glyphicon glyphicon-ok"></span> Save
+      </button>
+      <a href="{% url 'index' %}" class="btn btn-default">Cancel</a>
+    </div>
+  </form>
+ </div>
+</div>     
+{% endblock %}
+
+{% block scripts %}
+  
+{% endblock %}

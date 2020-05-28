@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <h4>Product Category</h4>
+  </div>
+  <div class="card-body">
+    <form method="POST">
+   {% csrf_token %}
+   {{ product_category_add.as_p }}
+   <button type="submit" class="btn btn-success">Category Add</button>
+</form>
+  </div>
+  
+</div>
+{% endblock %}

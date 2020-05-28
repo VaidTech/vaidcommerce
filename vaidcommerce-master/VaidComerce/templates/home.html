@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block stylesheet %}{% endblock %}
+{% block content %}
+{% include 'slideshow.html' %}
+<section class="featured-categories">
+    <div class="container">
+        <div class="row">
+          {% for item in product %}
+         <div class="col-md-4">
+           <h6> <a href="{% url 'category' name=item.categories %}"><strong> Category :{{ item.categories }} </strong></a></h6>
+           <strong><a href='#'> Title : {{ item.title }} </a></strong></h4>
+           <span class="badge badge-pill -color">New</span>
+           {% if item.image %}
+            <a href="{% url 'single_product' id=item.id%}"><img src="{{ item.image.url }}" alt=""></a>
+            {% else %}
+            <img src="{% static 'img/pic_2.jpg' %}" alt="">
+            {% endif %}
+            <h4 ><strong> Price- ${{ item.price }} </strong></h4>
+          </div>
+         {% endfor %}
+        </div>
+    </div>
+</section>
+ 
+ 
+<!----------------- New products ----------------------------------->
+<section class="new-products">
+        <div class="container">
+                <div class="title-box">
+                    <h2>New Arrivels</h2>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-3">
+                      <div class="product-top">                   
+                        
+                       
+                       <div class="overly-right">
+                           <button type="button" class="btn btn-secondary" title="Quick Shop">
+                           <i class="fa fa-eye"></i></button>
+                           <button type="button" class="btn btn-secondary" title="Add to wish list">
+                           <i class="fa fa-heart-o"></i></button>
+                           <button type="button" class="btn btn-secondary" title="Add to Cart">
+                           <i class="fa fa-shopping-cart"></i>
+                          </button>
+                       </div>
+                       </div>
+                         </div>
+                      </div>
+                   
+                      </div>
+                        
+                             
+                              
+
+<!---------------- Products features---------------------------------------->
+
+<section class="website-features">
+ <div class="container">
+  <div class="row">
+    <div class="col-md-3 feature-box">
+     <img src="{%static 'img/14.png' %}" alt="">
+       <div class="feature-text">
+        <p><b>100% orginal items</b>are availble company</p>
+      </div>
+    </div>
+    <div class="col-md-3 feature-box">
+      <img src="{% static 'img/15.png' %}" alt="">
+        <div class="feature-text">
+          <p><b>Returns within 30 days</b>or receving your order</p>
+        </div>
+    </div>
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'img/14.jpg' %}" alt="">
+             <div class="feature-text">
+               <p><b>Get free delivery </b>order on more than price</p>
+            </div>
+        </div>
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'img/16.png' %}" alt="">
+                <div class="feature-text">
+                  <p><b>pay online through multiple </b>payment option (card payment/not banking)</p>
+                </div>
+         </div>        
+</div>
+</div>
+</section>
+
+ <!-- Paginator -->
+ <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      {% if product.has_previous %}  
+      <li class="page-item"><a class="page-link" href="?page={{ product.previous_page_number }}">Previous</a></li>
+  {% endif %}
+    </li>
+
+    <span class="current">
+      Page {{ product.number }} of {{ product.paginator.num_pages }}.
+  </span>
+    
+    <li class="page-item">
+      {% if product.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ product.next_page_number }}">Next</a></li>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
+
+{% endblock %} 
+    
+{% block script %}{% endblock %}
