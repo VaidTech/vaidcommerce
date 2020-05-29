@@ -23,8 +23,6 @@ def get_category(request, name):
 
 
 def get_single(request, id):
-    # post = Product.objects.get(pk=7)
-    # image_list = post.images.all()
     post = get_object_or_404(Product, id=id)
     gallery = post.image_gallerys.all()
     print(gallery)
@@ -171,11 +169,6 @@ def get_remove_form_cart(request, slug):
 
 
 def get_order_summary(request):
-    # order = Order.objects.get(user=request.user, ordered=False)
-    # context = {
-    #     'object':order
-    #         }
-    # return render(request, 'products/summary.html', context)
 
     try:
         order = Order.objects.get(user=request.user, order_verify=False)
