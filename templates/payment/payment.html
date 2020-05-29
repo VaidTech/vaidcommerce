@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static  'css/payment/payment.css' %}">
+<style type="text/css">
+  .select{
+    display: none;
+  }
+</style>
+{% endblock %}
+{% block content %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Product Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total Price</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+       
+    {% for i in order.items.all %} 
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.item.title }}</td>
+      <td>{{ i.item.price }}</td>
+      <td>{{ i.quantity }}</td>
+       <td>{{ i.get_total_item_discount_price }}</td>
+       
+    </tr>
+       
+  {% endfor %}
+  <tr>
+    <td colspan="4">Total Order</td>
+    <td>{{ order.get_total }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2>Payment</h2>
+<div class="card">
+  <div class="card-body">
+<form action="" method="POST">
+  {% csrf_token %}
+  <!-- {{form.as_p}} -->
+  <div id="form_group" class="form-group">
+    {% render_field form.payment_method class='form-control1' placeholder=form.payment_method.label %}
+  </div>
+  <div class="select">
+  
+  <div id="form_group" class="form-group">
+    {% render_field form.email class="form-control1" placeholder=form.email.label%}
+  </div>
+  <div id="form_group" class="form-group">
+    {% render_field form.mobile_number class='form-control1' placeholder=form.mobile_number.label %}
+  </div>
+
+   <div id="form_group" class="form-group">
+    {% render_field form.transaction class='form-control1' placeholder=form.transaction.label %}
+  </div> 
+
+  <div id="form_group" class="form-group">
+    {% render_field form.time class='form-control1' placeholder=form.time.label %}
+  </div>
+  <div id="form_group" class="form-group">
+    {% render_field form.amount class='form-control1' placeholder=form.amount.label %}
+  </div> 
+
+  <button type="submit" class="btn btn-success">
+    <span class="glyphicon glyphicon-ok"></span> Save
+  </button>
+  </div>
+
+</form>
+</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui.min.js'%}"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select#id_payment_method').change(function(){
+         var man = $(this).children('option:selected').val();
+         if(man ==='BKASH'){
+          $('.select').show();
+         };
+         if(man ==='ROCKET'){
+          $('.select').show();
+         };
+         if(man ==='BANK'){
+          $('.select').hide();
+         };
+      });
+    });
+  </script>
+{% endblock %}

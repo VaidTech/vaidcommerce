@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Vaid E-commerce  {% endblock %} </title>
+
+    <link rel="stylesheet" href="{%static 'css/ecomerce.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     
+    {% block stylesheet %}{% endblock %}
+    
+</head>
+<body>
+    
+    {% include 'navbar.html' %}
+
+<div class="mt-5 ">
+{% if messages %}
+        {% for message in messages %}        
+        <div class="alert alert-{{ message.tags }}  alert-dismissible fade show" role="alert">
+           {{ message }}
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+ {% endfor %}
+{% endif %}
+</div>
+
+<!-------------- featured Section ----------------------------------------------------------->
+  {% block content %}
+
+
+  {% endblock %}
+
+
+
+{% include 'footer.html' %}
+<!---------- script section--------------------->
+{% block scripts %}
+<script>
+    function openmenu(){
+    document.getElementById("side-menu").style.display="block";
+    document.getElementById("menu-btn").style.display="none";
+    document.getElementById("close-btn").style.display="block";
+     
+}
+function closemenu(){
+    document.getElementById("side-menu").style.display="none";
+    document.getElementById("menu-btn").style.display="block";
+    document.getElementById("close-btn").style.display="none";
+     
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/65d597ebb9.js" crossorigin="anonymous"></script>
+{% endblock %}
+</body>
+</html>

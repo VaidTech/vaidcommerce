@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="container">
+<div class="row">
+<form method="POST">
+
+	<!-- {% render_field orderitem.user class="form-control"%}
+	{% render_field orderitem.ordered class="form-control" %} -->
+     
+
+	{% for field in orderitem %}
+      <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+
+        {{ field|add_class:'form-control' }}
+        
+
+          
+        {% for error in field.errors %}
+          <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+</form>
+ </div>
+</div>
+{% endblock %}

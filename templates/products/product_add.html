@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block stylesheet %}
+ 
+{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3> Product Adding Page </h3>
+                <form method="POST" action="" enctype="multipart/form-data">
+                 {% csrf_token %}
+                 {{ form|crispy }}
+                 {{ formset.as_table }}
+                 <br/>
+                <button type="submit" class="btn btn-success">Product Add</button>
+            </form>
+           </div>
+        </div>
+    </div> 
+
+{% endblock %}

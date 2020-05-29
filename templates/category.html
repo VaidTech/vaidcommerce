@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title %}{% endblock %}
+{% block stylesheet %}
+ <style>
+     img {
+    height: 200px;
+    width: 245px;
+}
+.logo {
+    height: 40px;
+    margin: 5px 10px;
+    width: 122px;
+}
+ </style> 
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <h6> category name : {{ category.name }} </h6>
+<div class="row">
+        {% for item in posts %}
+        <div class="col-md-4"> 
+        <a href="{% url 'single_product' id=item.id %}"> <img src="{{ item.image.url  }}" alt=""></a>
+        <p class="new-arrival text-center">NEW</p>
+        <a href=""></a>
+        <h2>Title : {{ item.title }}</h2>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        {% if item.discount_price %}
+        <p> ${{ item.discount_price }} </p>
+        {% else %}
+        <p class="price"> Price - ${{ item.price }}</p>
+        {% endif %}
+        <p><b>condition</b> New </p>
+    </div>
+        {% endfor %}
+    
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        {% if posts.has_previous %}  
+        <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">Previous</a></li>
+    {% endif %}
+      </li>
+  
+      <span class="current">
+        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+    </span>
+      
+      <li class="page-item">
+        {% if posts.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next</a></li>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+
+
+{% endblock %}

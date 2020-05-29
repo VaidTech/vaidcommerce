@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static  'css/payment/payment.css' %}">
+{% endblock %}
+{% block content %}
+
+<h2>Payment Verify</h2>
+<div class="card">
+  <div class="card-body">
+<form action="" method="POST">
+  {% csrf_token %}
+  <div id="form_group" class="form-group">
+    {% render_field form.mobile_number class='form-control1' placeholder=form.mobile_number.label %}
+  </div>
+  <div id="form_group" class="form-group">
+    {% render_field form.token class='form-control1' placeholder=form.token.label %}
+  </div>
+  
+  <button type="submit" class="btn btn-success">
+    <span class="glyphicon glyphicon-ok"></span> Save 
+  </button>
+</form>
+</div>
+</div>
+{% endblock %}
