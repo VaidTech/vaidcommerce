@@ -2,3 +2,19 @@ Vaid E-comerce Project
 A test project for Vaid interns
 
 
+ecomerce project ja kisu ache :
+1.Add Cart
+2.Remove Cart
+3.Updated Cart
+4.Checkout
+5.Payment
+
+
+Add cart er janno ja function ta korchi ....:
+Function Name get_add_to_cart : ai function diya product ke cart add korano hoyache .. prothom ei product k
+add korta hoba...jodi kon 
+kon product aga theke toba add cart korla tar quantity barba..r product na theke toba notun kon product add korla
+cart update hobe...
+
+Remove cart janno ja function ta korchi ....:
+Function Name get_remove_form_cart : ai function prothom check korba Cart Product ache ki na ...
