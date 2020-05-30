@@ -11,10 +11,42 @@ ecomerce project ja kisu ache :
 
 
 Add cart er janno ja function ta korchi ....:
-Function Name get_add_to_cart : ai function diya product ke cart add korano hoyache .. prothom ei product k
-add korta hoba...jodi kon 
-kon product aga theke toba add cart korla tar quantity barba..r product na theke toba notun kon product add korla
-cart update hobe...
+Function Name get_add_to_cart : ai function diya product ke cart add korano hoyache ..
+User ke product choice korta hoba 
+item = get_object_or_404(Product, slug=slug)
+    order_item, created = OrderItem.objects.get_or_create(
+        item = item,
+        user = request.user,
+        ordered = False
+        )
+choice korer por order_item create kora hoiche ...
+order_qs = Order.objects.filter(user=request.user, order_verify=False)
+akhon User check o order check korer por shotto arop kore hoiche
+if order_qs.exists():
+        order = order_qs[0]
+        if order.items.filter(item__slug=item.slug).exists():
+            order_item.quantity +=1
+            order_item.save()
+            messages.info(request, "This item quantity was updated.")
+            return redirect('order_summary')
+ jodi product cart add theke abar jodi same product cart add kori tahole Quantity incress hoba..           
+else:            
+      order.items.add(order_item)
+      messages.info(request, "This item was added to your cart.")
+      return redirect('order_summary') 
+r product na theke ba notun kon product add korla cart update hobe.
+
 
 Remove cart janno ja function ta korchi ....:
 Function Name get_remove_form_cart : ai function prothom check korba Cart Product ache ki na ...
+order_qs = Order.objects.filter(
+        user=request.user,
+        order_verify=False
+    )
+jodi cart kon product theke tahole cart theke product remove hobe...
+sha janno order_qs 
+    
+
+
+
+
