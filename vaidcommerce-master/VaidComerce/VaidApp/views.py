@@ -61,7 +61,7 @@ def get_register(request):
     if request.method == 'POST':
         if form.is_valid():
             instance = form.save(commit=False)
-            instance.is_active = True
+            instance.is_active = False
             instance.save() 
 
             token = r.randint(0,9999)
@@ -97,6 +97,7 @@ def get_activate(request, uidb64, token):
     if user is not None:
         user.is_active = True
         user.save()
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return HttpResponse("<h2> Account is activated. Please Verify  <a href='/verify'> Verify </a> </h2>")
     else:
         return HttpResponse("<h2>The link is invalid </h2>")

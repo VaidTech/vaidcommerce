@@ -39,6 +39,7 @@ def get_single(request, id):
 
 
 def get_productadd(request):
+    
     ImageFormset = modelformset_factory(ImageGallery, fields=("image",), extra=4)
     form = ProductAddForm(request.POST, request.FILES)
     formset = ImageFormset(request.POST or None, request.FILES or None)

@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load widget_tweaks %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/order/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container">
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-6">
 <form method="POST" action="">
 {% csrf_token %}
   {% for field in form %}
@@ -20,8 +26,8 @@
 </div>
 
 <div class="col-md-6">
-	<h5 style="text-align: center; margin-left: 200px;"> Order Summary </h5>
-	<table style="margin-left:200px;" class="table table-bordered">
+	<h5 style="text-align: center;"> Order Summary </h5>
+	<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>

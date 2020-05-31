@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -151,20 +150,19 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = 'index'
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '224900104211-i8i09j7c4acm88c76r5v6tq0sl455smv.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'AeUpVpv6cq-kTxczwKjOQxHD'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '215173732092-i4qurvq2br1kdk2btdvfep6gfl2i4rlj.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'jWo-ck8lOSAR4kZmoLTjaX8J'
 
 SOCIAL_AUTH_GITHUB_KEY = '94808af41527c7768b52'
 SOCIAL_AUTH_GITHUB_SECRET = 'b0512db9b72ae0a19aa25e7ec6ff0b7b526b571e'
 
 
-SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY='816agvrhdi2efe'
-SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET='mgGNqnnhFWpbDLCA'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY='860ysrzy2qi37m'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET='RBuMpsEu5s0ecJyW'
 
-SOCIAL_AUTH_FACEBOOK_KEY = '502656733724541'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'b2123e2559616c7fa963b9e4a789fac7'  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = '396485124635889'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '4675168c40225f0ebefb8a50eaa3c015'  # App Secret
 
-  
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.github.GithubOAuth2',

@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
 body{
-    
     background-color:#f1f3f4;
     font-family: 'Times New Roman', Times, serif;
 
@@ -374,7 +374,7 @@ body{
 }
 .new-arrival{
     background: green;
-    width: 50px;;
+    width: 50px;
     color:#fff;
     font-size: 12px;
     font-weight: bold;
@@ -428,6 +428,17 @@ body{
     margin-bottom: 50px;
 }
 
+.footer p {
+    font-size: 13px;
+    text-align: center;
+}
+.footer h2{
+    text-align: center;
+}
+
+.footer .h6{
+    text-align: center;
+}
 /*-----------------new add css---------*/
 input.form-control {
     width:400px;
@@ -435,7 +446,25 @@ input.form-control {
 }
 
 @media(max-width: 576px){
-  input.form-control {
+    input.form-control{
          width: 150px;
         }
+    .footer {
+    margin-top: 50px;
+    background: #000;
+    color: #fff;
+     
 }
+.footer p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer h2{
+    text-align: center;
+}
+
+}
+
+
+ 

@@ -1,0 +1,27 @@
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-left: 100px;
+}
+
+form {
+    margin-left: 200px;
+}
+h2{
+	text-align: center;
+}
+
+@media(max-width: 576px){
+	label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-left: 100px;
+}
+
+form {
+    margin-left: 2px;
+}
+h2{
+	text-align: center;
+}
+}

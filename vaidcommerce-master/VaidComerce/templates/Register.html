@@ -3,14 +3,10 @@
 {% load widget_tweaks %}
 {% block title %}{% endblock %}
 {% block stylesheet %}
-     <style>
-       form {
-         width:350px;
-       }
-     </style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/Register.css' %}">
 {% endblock %}
 {% block content %}
-<div class="row">
+
  <div class="container">
     <h2>Register Form</h2>
   <form method="POST">
@@ -18,10 +14,7 @@
     {% for field in form %}
       <div class="form-group">
         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-
-        {{ field|add_class:'form-control' }}
-
-          
+        {{ field|add_class:'form-control'}}
         {% for error in field.errors %}
           <span class="help-block">{{ error }}</span>
         {% endfor %}
@@ -35,8 +28,8 @@
       <a href="{% url 'index' %}" class="btn btn-default">Cancel</a>
     </div>
   </form>
- </div>
-</div>     
+ </div>   
+
 {% endblock %}
 
 {% block scripts %}
