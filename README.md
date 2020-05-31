@@ -3,7 +3,7 @@ A test project for Vaid interns
 
 
 ecomerce project ja kisu ache :
-Login
+1.Login
 Logout
 SignUp
 EmailConfirmation/Account Verify
