@@ -51,6 +51,7 @@ r product na theke ba notun kon product add korla cart update hobe.
 
 
 <----------------------------------Card Remove Function-------------------------------------->
+
 Remove Card janno ja function ta korchi ....:
 Function Name get_remove_form_cart : ai function prothom check korba Card Product ache ki na ...
 order_qs = Order.objects.filter(
