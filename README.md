@@ -25,22 +25,22 @@ A test project for Vaid interns
 :+1: Add Card er janno ja function ta korchi ....:</br>
 Function Name get_add_to_cart : ai function diya product Card add korano hoyache ..
 first User ke product choice korta hoba ..shei janno request korba (request, slug)<br/>
-item = get_object_or_404(Product, slug=slug)<br/>
-    order_item, created = OrderItem.objects.get_or_create(<br/>
-        item = item,<br/>
-        user = request.user,<br/>
-        ordered = False<br/>
+item = get_object_or_404(Product, slug=slug)<br  />
+    `(space)`order_item, created = OrderItem.objects.get_or_create(<br/>
+        `(space)``(space)`item = item,<br/>
+        `(space)`user = request.user,<br/>
+        `(space)`ordered = False<br/>
         )<br/>
 choice korer por order_item create kora hoiche ...<br/>
 order_qs = Order.objects.filter(user=request.user, order_verify=False)<br/>
 akhon User check o order_verify check korer por shotto arop kore hoiche<br/>
 if order_qs.exists():<br/>
-        order = order_qs[0]<br/>
-        if order.items.filter(item__slug=item.slug).exists():<br/>
-            order_item.quantity +=1<br/>
-            order_item.save()<br/>
-            messages.info(request, "This item quantity was updated.")<br/>
-            return redirect('order_summary')<br/>
+        `(space)`order = order_qs[0]<br/>
+        `(space)`if order.items.filter(item__slug=item.slug).exists():<br/>
+            `(space)`order_item.quantity +=1<br/>
+            `(space)`order_item.save()<br/>
+            `(space)`messages.info(request, "This item quantity was updated.")<br/>
+            `(space)`return redirect('order_summary')<br/>
  jodi product Card add theke abar jodi same product Card add kori tahole Quantity incress hoba..<br/>           
 else:<br/>            
       order.items.add(order_item)<br/>
