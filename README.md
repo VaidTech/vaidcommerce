@@ -22,7 +22,7 @@ A test project for Vaid interns
     Bkash/Rocket/Bank
 
 <-----------------------------------------------Card Add Function-------------------------------------------------> <br/>
-:+1: Add Card er janno ja function ta korchi ....:/
+:+1: Add Card er janno ja function ta korchi ....:</br>
 Function Name get_add_to_cart : ai function diya product Card add korano hoyache ..
 first User ke product choice korta hoba ..shei janno request korba (request, slug)<br/>
 item = get_object_or_404(Product, slug=slug)<br/>
