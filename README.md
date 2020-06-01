@@ -22,12 +22,12 @@ A test project for Vaid interns
     Bkash/Rocket/Bank
 
 <-----------------------------------------------Card Add Function-------------------------------------------------> <br/>
-:+1: Add Card er janno ja function ta korchi ....:</br>
+<pre><code>:+1: Add Card er janno ja function ta korchi ....:</br>
 Function Name get_add_to_cart : ai function diya product Card add korano hoyache ..
 first User ke product choice korta hoba ..shei janno request korba (request, slug)<br/>
 item = get_object_or_404(Product, slug=slug)<br  />
-     order_item, created = OrderItem.objects.get_or_create(<br/>
-      item = item,<br/>
+order_item, created = OrderItem.objects.get_or_create(<br/>
+     item = item,<br/>
       user = request.user,<br/>
       ordered = False<br/>
         )<br/>
@@ -117,5 +117,5 @@ mobile_number,<br/>
 transaction,<br/>
 time,<br/>
 amount<br/>
-payment model signals use kora hoyache......order model sathe payment model relation kora hoyache......jokhon sokol field<br/> thik thekba tokhon admin verify korba.jokhon payment model er payment_verify success hoba tokhon Order model er order_verify success hoba.......<br/>
+payment model signals use kora hoyache......order model sathe payment model relation kora hoyache......jokhon sokol field<br/> thik thekba tokhon admin verify korba.jokhon payment model er payment_verify success hoba tokhon Order model er order_verify success hoba.......<br/><code><pre>
 
