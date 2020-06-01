@@ -1,25 +1,25 @@
-#Vaid E-comerce Project
+# Vaid E-comerce Project
 A test project for Vaid interns
 
 
-*ecomerce project ja kisu ache :
-1.Login
-Logout
-SignUp
-EmailConfirmation/Account Verify
-Social auth
+## ecomerce project ja kisu ache :
+- Login
+- Logout
+- SignUp
+- EmailConfirmation/Account Verify
+- Social auth
   Github , Linkedin, Google, Facebook
-Category/subcategory
-Single page
-Category Related product
-Total product list
-Product add / Product Update/ Product delete
-Multiple image
-Add Card
-Remove Card
-Updated Card
-Checkout
-Payment system 
+- Category/subcategory
+- Single page
+- Category Related product
+- Total product list
+- Product add / Product Update/ Product delete
+- Multiple image
+- Add Card
+- Remove Card
+- Updated Card
+- Checkout
+- Payment system 
   Bkash/Rocket/Bank
 
 <-----------------------------------------------Card Add Function------------------------------------------------->
