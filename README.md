@@ -1,6 +1,7 @@
-# Vaid E-comerce Project
-A test project for Vaid interns
+![alt tag](https://pngimage.net/wp-content/uploads/2018/05/ecommerce-png-7.png)
 
+# Vaid E-comerce Project
+__A test project for Vaid interns__
 
 ## ecomerce project ja kisu ache :
 1. Login
@@ -21,7 +22,7 @@ A test project for Vaid interns
 17. Payment system 
     Bkash/Rocket/Bank
 
-<-----------------------------------------------Card Add Function-------------------------------------------------> <br/>
+<----------------------------------------------- **Card Add Function** -------------------------------------------------> <br/>
 <pre><code>:+1: Add Card er janno ja function ta korchi ....:</br>
 Function Name get_add_to_cart : ai function diya product Card add korano hoyache ..
 first User ke product choice korta hoba ..shei janno request korba (request, slug)<br/>
@@ -49,7 +50,7 @@ else:<br/>
 r product na theke ba notun kon product add korla cart update hobe.<br/>
 
 
-<----------------------------------Card Remove Function--------------------------------------><br/>
+<---------------------------------- __Card Remove Function__ --------------------------------------><br/>
 
 :smile: Remove Card janno ja function ta korchi ....:<br/>
 Function Name get_remove_form_cart : ai function prothom check korba Card Product ache ki na ...<br/>
@@ -77,7 +78,7 @@ if order.items.filter(item__slug=item.slug).exists():<br/>
        return redirect('index')<br/>
        
        
-<--------------------------------------  Single product remove Card-----------------------------><br/>     
+<-------------------------------------- **Single product remove Card** -----------------------------><br/>     
 Function Name get_single_remove_form_cart: Card theke Product quantity decrease korer janno get_single_remove_form_cart<br/>
 Function ta use kore hoyache....Romove Card Moto prothom check korba<br/> 
 item = get_object_or_404(Product, slug=slug)<br/>
@@ -102,7 +103,7 @@ else:<br/>
 r potibar message framework maddhoma message show koraba..........<br/>
 
 
-<--------------------------------- CheckOut Function------------------------------------------------------><br/>
+<--------------------------------- **CheckOut Function** ------------------------------------------------------><br/>
 Function Name Checkout : a function Customer sokol poker address input deya deba...Input field gulu hoilo Mobile number etc.<br/>
 check korba Card kon product ache ki na sha janno try and Exception use kore hoyache...<br/>
 
@@ -117,5 +118,5 @@ mobile_number,<br/>
 transaction,<br/>
 time,<br/>
 amount<br/>
-payment model signals use kora hoyache......order model sathe payment model relation kora hoyache......jokhon sokol field<br/> thik thekba tokhon admin verify korba.jokhon payment model er payment_verify success hoba tokhon Order model er order_verify success hoba.......<br/><code><pre>
+payment model signals use kora hoyache......order model sathe payment model relation kora hoyache<br/>...jokhon sokol field thik thekba tokhon admin verify korba.<br/>jokhon payment model er payment_verify success hoba tokhon Order model er order_verify success hoba.......<br/><code><pre>
 
