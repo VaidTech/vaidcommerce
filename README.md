@@ -8,18 +8,21 @@ A test project for Vaid interns
 4. SignUp
 5. EmailConfirmation/Account Verify
 6. Social auth
-  Github , Linkedin, Google, Facebook
-8. Category/subcategory
-9. Single page
-10. Category Related product
-11. Total product list
-12. Product add / Product Update/ Product delete
-13. Multiple image
-14. Add Card
-15. Remove Card
-16. Updated Card
-17. Checkout
-18. Payment system 
+  - Github 
+   - Linkedin
+    - Google
+     - Facebook
+7. Category/subcategory
+8. Single page
+9. Category Related product
+10. Total product list
+11. Product add / Product Update/ Product delete
+12. Multiple image
+13. Add Card
+14. Remove Card
+15. Updated Card
+16. Checkout
+17. Payment system 
     Bkash/Rocket/Bank
 
 <-----------------------------------------------Card Add Function------------------------------------------------->
