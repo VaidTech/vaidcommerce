@@ -1,8 +1,8 @@
-Vaid E-comerce Project
+#Vaid E-comerce Project
 A test project for Vaid interns
 
 
-ecomerce project ja kisu ache :
+*ecomerce project ja kisu ache :
 1.Login
 Logout
 SignUp
