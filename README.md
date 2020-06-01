@@ -3,24 +3,24 @@ A test project for Vaid interns
 
 
 ## ecomerce project ja kisu ache :
-- Login
-- Logout
-- SignUp
-- EmailConfirmation/Account Verify
-- Social auth
+1. Login
+2. Logout
+4. SignUp
+5. EmailConfirmation/Account Verify
+6. Social auth
   Github , Linkedin, Google, Facebook
-- Category/subcategory
-- Single page
-- Category Related product
-- Total product list
-- Product add / Product Update/ Product delete
-- Multiple image
-- Add Card
-- Remove Card
-- Updated Card
-- Checkout
-- Payment system 
-  Bkash/Rocket/Bank
+8. Category/subcategory
+9. Single page
+10. Category Related product
+11. Total product list
+12. Product add / Product Update/ Product delete
+13. Multiple image
+14. Add Card
+15. Remove Card
+16. Updated Card
+17. Checkout
+18. Payment system 
+    Bkash/Rocket/Bank
 
 <-----------------------------------------------Card Add Function------------------------------------------------->
 Add Card er janno ja function ta korchi ....:
