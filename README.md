@@ -7,11 +7,7 @@ A test project for Vaid interns
 2. Logout
 4. SignUp
 5. EmailConfirmation/Account Verify
-6. Social auth
-  - Github 
-   - Linkedin
-    - Google
-     - Facebook
+6. Social auth Github - Linkedin - Google - Facebook
 7. Category/subcategory
 8. Single page
 9. Category Related product
@@ -25,16 +21,16 @@ A test project for Vaid interns
 17. Payment system 
     Bkash/Rocket/Bank
 
-<-----------------------------------------------Card Add Function------------------------------------------------->
-Add Card er janno ja function ta korchi ....:
+<-----------------------------------------------Card Add Function-------------------------------------------------> <br/>
+:+1: Add Card er janno ja function ta korchi ....:<br/>
 Function Name get_add_to_cart : ai function diya product Card add korano hoyache ..
-first User ke product choice korta hoba ..shei janno request korba (request, slug)
-item = get_object_or_404(Product, slug=slug)
-    order_item, created = OrderItem.objects.get_or_create(
-        item = item,
-        user = request.user,
-        ordered = False
-        )
+first User ke product choice korta hoba ..shei janno request korba (request, slug)<br/>
+item = get_object_or_404(Product, slug=slug)<br/>
+    order_item, created = OrderItem.objects.get_or_create(<br/>
+        item = item,<br/>
+        user = request.user,<br/>
+        ordered = False<br/>
+        )<br/>
 choice korer por order_item create kora hoiche ...
 order_qs = Order.objects.filter(user=request.user, order_verify=False)
 akhon User check o order_verify check korer por shotto arop kore hoiche
@@ -55,7 +51,7 @@ r product na theke ba notun kon product add korla cart update hobe.
 
 <----------------------------------Card Remove Function-------------------------------------->
 
-Remove Card janno ja function ta korchi ....:
+:smile: Remove Card janno ja function ta korchi ....:
 Function Name get_remove_form_cart : ai function prothom check korba Card Product ache ki na ...
 order_qs = Order.objects.filter(
         user=request.user,
